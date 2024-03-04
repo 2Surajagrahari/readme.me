@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-AppointMed</title>
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="sthethescope.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="contact">
+        <h2>Contact Us !</h2>
+
+    <form action="#">
+        <div class="input-box">
+            <div class="input-field field">
+                <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                <div class="error-txt">Name can't be blank</div>
+            </div>
+            <div class="input-field field">
+                <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                <div class="error-txt email">Email Address can't be blank</div>
+            </div>
+        </div>
+                
+        <div class="input-box">
+            <div class="input-field field">
+                <input type="number" placeholder="Phone Number" id="phone" name="integerInput" class="item" autocomplete="off">
+                <div class="error-txt">Phone Number can't be blank</div>
+            </div>
+        </div>
+        
+        <script>
+            document.getElementById("phone").addEventListener("input", function() {
+                if (this.value.length > 10) {
+                    this.value = this.value.slice(0, 10); 
+                }
+            });
+        </script>
+        
+        <div class="input-field field">
+                <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                <div class="error-txt">Subject can't be blank</div>
+            </div>
+        </div>
+        <div class="textarea-field field">
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                <div class="error-txt">Message can't be blank</div>
+        </div>
+                    
+                <button type="submit">Send Message</button>
+                <!-- <div class="back">
+                    <button href="index.html">Home</button>
+                    </div>
+                 -->
+    </form>
+    </section>
+    
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>               
+    <script src="script2.js"></script>
+</body>
+                    
+</html>
